@@ -1,0 +1,131 @@
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: var(--color-light);
+  margin: 0 auto;
+  padding: 0;
+  color: var(--color-text);
+  border-radius: 8px;
+  opacity: 0.6;
+}
+
+body {
+  background-color: var(--color-back);
+  display: flex;
+  flex-direction: column;
+}
+
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 9;
+}
+select {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: #000;
+}
+
+img {
+  justify-content: center;
+  align-items: center;
+}
+
+.textStyle {
+  text-align: center;
+}
+.body_video {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.body_video video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.2;
+}
+
+p {
+  align-items: center;
+  color: var(--color-text);
+}
+b {
+  margin-top: 20px;
+  color: var(--color-text);
+}
+a {
+  color: var(--color-text);
+}
+h2 {
+  color: var(--color-text);
+  margin-bottom: 40px;
+  align-items: center;
+}
+h4 {
+  color: var(--color-text);
+}
+
+/* media query fino a mobile  */
+
+@media screen and (max-width: 760px) {
+  .body_video {
+    display: none;
+  }
+
+  p {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  b {
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    padding: 70px;
+    margin-top: 10px;
+  }
+  body {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  select {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+/* media query fino a tv */
+
+@media screen and (max-width: 1440px) {
+  .body_video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    overflow: hidden;
+    flex-wrap: wrap;
+  }
+  body {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
